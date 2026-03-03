@@ -2,10 +2,10 @@ FenerShop — CSS Layout & Responsive Tasarım
 
 
 KULLANIM
-  1. index.html ve style.css aynı klasörde olmalı.
-  2. index.html'e çift tıkla, tarayıcıda açılır.
+  - index.html ve style.css aynı klasörde olmalı.
+  - index.html'e çift tıkla, tarayıcıda açılır.
 
-  1. LAYOUT YÖNTEMLERİ — NEREDE KULLANDIM?
+1. LAYOUT YÖNTEMLERİ — NEREDE KULLANDIM?
 
 FLEXBOX kullandığım yerler:
   • Header (.header-inner)
