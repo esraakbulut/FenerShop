@@ -39,7 +39,7 @@ CSS GRID kullandığım yer:
 
   2. BREAKPOINT'LER
 
-  >= 1024px  →  4 sütun  (varsayılan, media query yok)
+   1024px  →  4 sütun  (varsayılan, media query yok)
   600–1023px →  2 sütun
               @media (min-width: 600px) and (max-width: 1023px)
 
@@ -52,20 +52,20 @@ CSS GRID kullandığım yer:
 
   3. ÖĞRENDİKLERİM / ZORLANDIKLARIM
 
-  1. Flex ile Grid'i birlikte kullanmak:
+  1- Flex ile Grid'i birlikte kullanmak:
      İlk başta her şeye Flex uygulamaya çalıştım.
      Ürün kartlarını sıralayınca Grid'in çok daha
      uygun olduğunu anladım; Grid satır yüksekliklerini
      otomatik eşitledi, Flex'te bunu manuel yapmak
      gerekiyordu.
 
-  2. position: sticky için z-index yönetimi:
+  2- position: sticky için z-index yönetimi:
      Header sticky yapınca filtre satırının üstüne
      biniyordu. Her sticky elemana ayrı z-index
      (header: 100, filtre: 90) vermek gerektiğini
      öğrendim.
 
-  3. CSS değişkenleri kodun bakımını kolaylaştırdı:
+  3- CSS değişkenleri kodun bakımını kolaylaştırdı:
      --primary rengini tek yerden değiştirince
      header, buton, rozet hepsi otomatik güncellendi.
      Önceden her rengi ayrı ayrı değiştiriyordum.
