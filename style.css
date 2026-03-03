@@ -1,0 +1,563 @@
+/* =============================================
+   style.css — FenerShop
+   CSS Layout & Responsive Tasarım Ödevi
+   ============================================= */
+
+/* ------------------------------------------
+   1. CSS DEĞİŞKENLERİ
+------------------------------------------ */
+:root {
+  --primary:     #1a2b5e;   /* lacivert */
+  --secondary:   #f5c518;   /* sarı */
+  --bg:          #f4f4f4;
+  --bg-card:     #ffffff;
+  --text:        #1a1a1a;
+  --text-muted:  #666666;
+  --muted:       #aaaaaa;
+  --border:      #dddddd;
+  --radius:      6px;
+  --shadow:      0 2px 8px rgba(0, 0, 0, 0.10);
+}
+
+
+/* ------------------------------------------
+   2. RESET & TEMEL
+------------------------------------------ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  color: var(--text);
+  background-color: var(--bg);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  background: none;
+}
+
+/* Yalnızca ekran okuyucu */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+
+/* ------------------------------------------
+   3. BUTONLAR
+------------------------------------------ */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 3px;
+}
+
+.btn-hero {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.btn-hero:hover {
+  background-color: #e0b200;
+}
+
+.btn-hero:active {
+  transform: scale(0.98);
+}
+
+.btn-kart {
+  background-color: var(--primary);
+  color: #ffffff;
+  font-size: 0.85rem;
+  padding: 0.45rem 1rem;
+}
+
+.btn-kart:hover {
+  background-color: #243d80;
+}
+
+.btn-kart:active {
+  background-color: #111e42;
+}
+
+.btn-kart:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 3px;
+}
+
+
+/* ------------------------------------------
+   4. HEADER — Sticky, Flex
+------------------------------------------ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--primary);
+  border-bottom: 3px solid var(--secondary);
+  box-shadow: var(--shadow);
+}
+
+.header-inner {
+  display: flex;                   /* FLEX */
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.logo span {
+  color: var(--secondary);
+}
+
+.logo:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+
+.main-nav {
+  display: flex;                   /* FLEX */
+  gap: 2rem;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.80);
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--secondary);
+  border-bottom-color: var(--secondary);
+}
+
+.nav-link.active {
+  color: var(--secondary);
+  font-weight: 700;
+  border-bottom-color: var(--secondary);
+}
+
+.nav-link:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+
+/* ------------------------------------------
+   5. HERO
+------------------------------------------ */
+.hero {
+  background-color: var(--primary);
+  background-image: linear-gradient(135deg, #111e42 0%, #1a2b5e 100%);
+  color: #ffffff;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.hero-icerik {
+  max-width: 600px;
+}
+
+.hero-etiket {
+  display: inline-block;
+  background-color: var(--secondary);
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.8rem;
+  border-radius: var(--radius);
+  margin-bottom: 1.2rem;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.hero-aciklama {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.75);
+  max-width: 480px;
+  margin: 0 auto 2rem;
+}
+
+
+/* ------------------------------------------
+   6. FİLTRE SATIRI — Flex
+------------------------------------------ */
+.filtre-bar {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  padding: 0.9rem 0;
+  position: sticky;
+  top: 67px;
+  z-index: 90;
+  box-shadow: var(--shadow);
+}
+
+.filtre-inner {
+  display: flex;                   /* FLEX */
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;                 /* responsive: alta kırılır */
+}
+
+.arama-wrapper {
+  flex: 1;
+  min-width: 180px;
+}
+
+.arama-input {
+  width: 100%;
+  padding: 0.55rem 1rem;
+  font-size: 0.95rem;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+}
+
+.arama-input::placeholder {
+  color: var(--muted);
+}
+
+/* Input :focus — belirgin */
+.arama-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(26, 43, 94, 0.15);
+}
+
+.chip-grup {
+  display: flex;                   /* FLEX */
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.chip {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1.5px solid var(--border);
+  color: var(--text-muted);
+  background-color: transparent;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.chip:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background-color: #eef1f9;
+}
+
+.chip:active {
+  background-color: #d8dff0;
+}
+
+.chip:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.chip--aktif {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.chip--aktif:hover {
+  background-color: #243d80;
+  border-color: #243d80;
+  color: #ffffff;
+}
+
+
+/* ------------------------------------------
+   7. ÜRÜNLER — CSS Grid
+------------------------------------------ */
+.urunler-bolum {
+  padding: 3rem 0 4rem;
+}
+
+.bolum-baslik {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+/* Grid — varsayılan 4 sütun (≥1024px) */
+.urunler-grid {
+  display: grid;                              /* GRID */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+
+/* ------------------------------------------
+   8. ÜRÜN KARTI
+------------------------------------------ */
+.kart {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Kart :hover */
+.kart:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.13);
+}
+
+/* Placeholder görsel — her kart farklı ton */
+.kart-gorsel {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: #e0e0e0;
+}
+
+.kart-gorsel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Rozet */
+.rozet {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.rozet--yeni    { background-color: var(--primary); color: #ffffff; }
+.rozet--indirim { background-color: #e53935;        color: #ffffff; }
+.rozet--populer { background-color: var(--secondary); color: var(--primary); }
+
+/* Kart içerik */
+.kart-govde {
+  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.kart-kategori {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.kart-ad {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.kart-aciklama {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.kart-alt {
+  display: flex;               /* FLEX */
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--border);
+}
+
+.kart-fiyat {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.kart-fiyat-eski {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+
+/* ------------------------------------------
+   9. FOOTER — Flex
+------------------------------------------ */
+.site-footer {
+  background-color: var(--primary);
+  color: rgba(255,255,255,0.65);
+  padding: 2rem 0;
+  border-top: 3px solid var(--secondary);
+}
+
+.footer-inner {
+  display: flex;               /* FLEX */
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-telif {
+  font-size: 0.9rem;
+}
+
+.footer-nav {
+  display: flex;               /* FLEX */
+  gap: 1.5rem;
+}
+
+.footer-link {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.60);
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: var(--secondary);
+}
+
+.footer-link:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+
+/* =============================================
+   10. RESPONSIVE — MEDIA QUERIES
+   ============================================= */
+
+/* Tablet: 600px – 1023px → 2 sütun */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .urunler-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Mobil: < 600px → 1 sütun, header alta kırılır */
+@media (max-width: 599px) {
+
+  /* Header: logo + nav alt alta */
+  .site-header {
+    height: auto;
+    padding: 0.75rem 0;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .main-nav {
+    gap: 1.2rem;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 3rem 0;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Filtre: alt alta */
+  .filtre-bar {
+    top: 0;
+  }
+
+  .filtre-inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Grid: 1 sütun */
+  .urunler-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer: ortala */
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

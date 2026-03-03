@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FenerShop – Resmi Fenerbahçe Mağazası</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">Fener<span>Shop</span></a>
+      <nav class="main-nav" aria-label="Ana Navigasyon">
+        <a href="#" class="nav-link active" aria-current="page">Ana Sayfa</a>
+        <a href="#urunler" class="nav-link">Ürünler</a>
+        <a href="#iletisim" class="nav-link">İletişim</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-baslik">
+      <div class="container hero-icerik">
+        <p class="hero-etiket">2024–25 Sezon Koleksiyonu</p>
+        <h1 id="hero-baslik">Sarı Lacivert<br />Her Zaman Kalbimizde</h1>
+        <p class="hero-aciklama">
+          Fenerbahçe'nin resmi ürünleri, özel fiyatlar ve hızlı kargo ile kapınıza gelsin.
+        </p>
+        <a href="#urunler" class="btn btn-hero">Ürünleri İncele</a>
+      </div>
+    </section>
+
+    <!-- FİLTRE -->
+    <section class="filtre-bar" id="urunler" aria-label="Filtreler">
+      <div class="container filtre-inner">
+        <div class="arama-wrapper">
+          <label for="ara" class="sr-only">Ürün Ara</label>
+          <input type="search" id="ara" class="arama-input" placeholder="Ürün ara…" />
+        </div>
+        <div class="chip-grup" role="group" aria-label="Kategori filtreleri">
+          <button class="chip chip--aktif" type="button">Tümü</button>
+          <button class="chip" type="button">Yeni</button>
+          <button class="chip" type="button">Popüler</button>
+          <button class="chip" type="button">İndirimli</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÜRÜNLER -->
+    <section class="urunler-bolum" aria-labelledby="urunler-baslik">
+      <div class="container">
+        <h2 id="urunler-baslik" class="bolum-baslik">Öne Çıkan Ürünler</h2>
+
+        <div class="urunler-grid">
+
+          <article class="kart">
+            <div class="kart-gorsel">
+              <img src="https://cdn.akakce.com/z/puma/puma-775360-ic-saha-erkek-fenerbahce-si.jpg" alt="İç Saha Forması 2024-25" />
+              <span class="rozet rozet--yeni">Yeni</span>
+            </div>
+            <div class="kart-govde">
+              <p class="kart-kategori">Forma</p>
+              <h3 class="kart-ad">İç Saha Forması 2024–25</h3>
+              <p class="kart-aciklama">Sarı-lacivert, nefes alabilen kumaş, resmi lisanslı.</p>
+              <div class="kart-alt">
+                <span class="kart-fiyat">₺1.299</span>
+                <button class="btn btn-kart" type="button" aria-label="İç Saha Forması sepete ekle">Sepete Ekle</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="kart">
+            <div class="kart-gorsel">
+              <img src="https://korayspor.sm.mncdn.com/mnresize/1920/-/korayspor/products/77536802_1.jpg" alt="Deplasman Forması 2024-25" />
+              <span class="rozet rozet--indirim">-%20</span>
+            </div>
+            <div class="kart-govde">
+              <p class="kart-kategori">Forma</p>
+              <h3 class="kart-ad">Deplasman Forması 2024–25</h3>
+              <p class="kart-aciklama">Lacivert, slim-fit kesim, isim-numara baskı seçeneği.</p>
+              <div class="kart-alt">
+                <div>
+                  <span class="kart-fiyat-eski">₺1.249</span>
+                  <span class="kart-fiyat">₺999</span>
+                </div>
+                <button class="btn btn-kart" type="button" aria-label="Deplasman Forması sepete ekle">Sepete Ekle</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="kart">
+            <div class="kart-gorsel">
+              <img src="https://media.fenerium.com/Fenerium/media/images/urunler/TA145UGP075LC.jpg" alt="Taraftar Atkısı" />
+              <span class="rozet rozet--populer">Popüler</span>
+            </div>
+            <div class="kart-govde">
+              <p class="kart-kategori">Aksesuar</p>
+              <h3 class="kart-ad">Taraftar Atkısı</h3>
+              <p class="kart-aciklama">Jakarlı dokuma, sarı-lacivert, %100 akrilik iplik.</p>
+              <div class="kart-alt">
+                <span class="kart-fiyat">₺349</span>
+                <button class="btn btn-kart" type="button" aria-label="Taraftar Atkısı sepete ekle">Sepete Ekle</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="kart">
+            <div class="kart-gorsel">
+              <img src="https://media.fenerium.com/Fenerium/media/images/urunler/TK017EGY21407.jpg" alt="Kapüşonlu Sweatshirt" />
+              <span class="rozet rozet--yeni">Yeni</span>
+            </div>
+            <div class="kart-govde">
+              <p class="kart-kategori">Giyim</p>
+              <h3 class="kart-ad">Kapüşonlu Sweatshirt</h3>
+              <p class="kart-aciklama">Lacivert, %80 pamuk, göğüs arması baskılı.</p>
+              <div class="kart-alt">
+                <span class="kart-fiyat">₺799</span>
+                <button class="btn btn-kart" type="button" aria-label="Kapüşonlu Sweatshirt sepete ekle">Sepete Ekle</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="kart">
+            <div class="kart-gorsel">
+              <img src="https://media.fenerium.com/Fenerium/media/images/urunler/ZC027TFS03001.jpg" alt="Fenerbahçe Kupası" />
+              <span class="rozet rozet--indirim">-%15</span>
+            </div>
+            <div class="kart-govde">
+              <p class="kart-kategori">Aksesuar</p>
+              <h3 class="kart-ad">Fenerbahçe Kupası</h3>
+              <p class="kart-aciklama">350 ml seramik kupa, logo baskılı, dishwasher safe.</p>
+              <div class="kart-alt">
+                <div>
+                  <span class="kart-fiyat-eski">₺199</span>
+                  <span class="kart-fiyat">₺169</span>
+                </div>
+                <button class="btn btn-kart" type="button" aria-label="Fenerbahçe Kupası sepete ekle">Sepete Ekle</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="kart">
+            <div class="kart-gorsel">
+              <img src="https://media.fenerium.com/Fenerium/media/images/urunler/AY039EFS06001.jpg" alt="FB Spor Ayakkabı" />
+              <span class="rozet rozet--populer">Popüler</span>
+            </div>
+            <div class="kart-govde">
+              <p class="kart-kategori">Ayakkabı</p>
+              <h3 class="kart-ad">FB Spor Ayakkabı</h3>
+              <p class="kart-aciklama">Lacivert-sarı renk, hafif taban, günlük kullanım.</p>
+              <div class="kart-alt">
+                <span class="kart-fiyat">₺1.599</span>
+                <button class="btn btn-kart" type="button" aria-label="FB Spor Ayakkabı sepete ekle">Sepete Ekle</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="kart">
+            <div class="kart-gorsel">
+              <img src="https://media.fenerium.com/Fenerium/media/images/urunler/SM021UFS014SR.jpg" alt="Kişiye Özel Futbol Topu" />
+              <span class="rozet rozet--yeni">Yeni</span>
+            </div>
+            <div class="kart-govde">
+              <p class="kart-kategori">Aksesuar</p>
+              <h3 class="kart-ad">Kişiye Özel Futbol Topu</h3>
+              <p class="kart-aciklama">İsim yazdırılabilir, FB logosu baskılı, dayanıklı dış yüzey.</p>
+              <div class="kart-alt">
+                <span class="kart-fiyat">₺449</span>
+                <button class="btn btn-kart" type="button" aria-label="Kişiye Özel Futbol Topu sepete ekle">Sepete Ekle</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="kart">
+            <div class="kart-gorsel">
+              <img src="https://korayspor.sm.mncdn.com/mnresize/1920/-/korayspor/products/h78976_1.jpg" alt="Antrenman Eşofmanı" />
+              <span class="rozet rozet--indirim">-%25</span>
+            </div>
+            <div class="kart-govde">
+              <p class="kart-kategori">Giyim</p>
+              <h3 class="kart-ad">Antrenman Eşofmanı</h3>
+              <p class="kart-aciklama">Lacivert-sarı, ince astarlı, çift yön fermuarlı ceket.</p>
+              <div class="kart-alt">
+                <div>
+                  <span class="kart-fiyat-eski">₺1.399</span>
+                  <span class="kart-fiyat">₺1.049</span>
+                </div>
+                <button class="btn btn-kart" type="button" aria-label="Antrenman Eşofmanı sepete ekle">Sepete Ekle</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="iletisim">
+    <div class="container footer-inner">
+      <p class="footer-telif">© 2025 FenerShop. Tüm hakları saklıdır.</p>
+      <nav class="footer-nav" aria-label="Alt Navigasyon">
+        <a href="#" class="footer-link">Gizlilik Politikası</a>
+        <a href="#" class="footer-link">İletişim</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
